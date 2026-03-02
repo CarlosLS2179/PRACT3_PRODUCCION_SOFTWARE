@@ -139,14 +139,14 @@ Sigue estos pasos para garantizar que tu proyecto cumple todos los requisitos y 
 1. **Asegúrate de que todos los tests existentes pasan**
    - Corrige el código inicial si es necesario para que todos los tests actuales funcionen correctamente.
 
-2. **Test Unitarios**
-   - Implementa y confirma que todos los tests en `core/tests/unit` funcionan correctamente. Los test unitarios validan funcionalidades aisladas, como validaciones de la clase `Expense` o el servicio `ExpenseService`.
+2. **Test Unitarios** (4 en total)
+   - Implementa y confirma que todos los tests en `core/tests/unit` están implementados y funcionan correctamente. Los test unitarios validan funcionalidades aisladas, como validaciones de la clase `Expense` o el servicio `ExpenseService`.
 
-3. **Test de Integración**
+3. **Test de Integración** (4 en total)
    - Asegúrate de que los tests de `core/tests/integration` están implementados y se ejecutan correctamente. Estos verifican la interacción entre distintas partes del sistema.
 
-4. **Test de Comportamiento**
-   - Trabaja con los tests de comportamiento en `core/tests/behaviour`, que simulan flujos de usuario completos.
+4. **Test de Comportamiento** (6 en total)
+   - Trabaja con los tests de comportamiento en `core/tests/behaviour`, que simulan flujos de usuario completos. Hay que implementar los 3 test de expense_management.feature que están vacíos y añadir otros 3 más.
 
 5. **Completa la funcionalidad pendiente**
    - Si algún test falla porque falta implementar alguna parte, añade el código necesario en el directorio `core/` hasta que todos los tests pasen con éxito.
