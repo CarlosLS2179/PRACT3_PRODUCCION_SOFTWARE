@@ -7,25 +7,42 @@ on:
 jobs:
   lint-and-test:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
 
       - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
 
       - name: Install uv
+        run: pip install uv
 
       - name: Install dependencies
+        run: |
+          pip install pytest
+          pip install behave
+          pip install ruff
+          pip install mypy
 
       - name: Install ruff and mypy
+        run: pip install ruff mypy pytest behave
 
       - name: Ruff format
+        run: ruff format .
 
       - name: Ruff linter
+        run: ruff check .
 
       - name: Mypy
+        run: mypy .
 
       - name: Unit tests
+        run: pytest core/tests/unit
 
       - name: Integration tests
+        run: pytest core/tests/integration
 
       - name: BDD tests
+        run: behave
