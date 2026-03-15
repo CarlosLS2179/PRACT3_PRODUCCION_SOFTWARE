@@ -48,3 +48,8 @@ def check_total(context, total):
 def check_expenses_length(context, expenses):
     total = len(context["db"]._expenses)
     assert expenses == total
+
+@then(parsers.parse("debe haber {expenses:d} gasto registrado"))
+def check_expenses_length_singular(context, expenses):
+    total = len(context["db"]._expenses)
+    assert expenses == total
