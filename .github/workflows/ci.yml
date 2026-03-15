@@ -20,11 +20,7 @@ jobs:
         run: pip install uv
 
       - name: Install dependencies
-        run: |
-          pip install pytest
-          pip install behave
-          pip install ruff
-          pip install mypy
+        run: pip install pytest pytest-bdd ruff mypy
 
       - name: Install ruff and mypy
         run: pip install ruff mypy pytest behave
