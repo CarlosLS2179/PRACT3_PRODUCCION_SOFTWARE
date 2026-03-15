@@ -45,4 +45,4 @@ jobs:
         run: pytest core/tests/integration
 
       - name: BDD tests
-        run: behave
+        run: behave core/tests/behaviour
